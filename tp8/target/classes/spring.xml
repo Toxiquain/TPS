@@ -1,0 +1,17 @@
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+
+        "https://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+    <bean id="ctr" class="cigma.pfe.controllers.ClientController" scope="prototype">
+        <constructor-arg ref="serv"/>
+
+    </bean>
+
+    <bean id="serv" class="cigma.pfe.services.ClientServiceImpl" scope="prototype">
+        <constructor-arg ref="repo"/>
+    </bean>
+
+    <bean id="repo" class="cigma.pfe.repositories.ClientRepositoryImpl" scope="prototype">
+    </bean>
+</beans>
+
